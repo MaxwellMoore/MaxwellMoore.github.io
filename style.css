@@ -1,0 +1,470 @@
+:root {
+  /* Colors */
+  --clr-blue: #008ad8;
+  --clr-red: #ff2517;
+  --clr-green: #78be21;
+  --clr-yellow: #ffce21;
+  --clr-white: #ffffff;
+  --clr-grey-100: #9d9d9d;
+  --clr-grey-200: #505050;
+  --clr-grey-300: #323232;
+  --clr-grey-400: #2d2d2d;
+  --clr-grey-500: #000000;
+
+  /* Fonts */
+  --ff-primary: "Outfit", sans-serif;
+  --ff-heading: var(--ff-primary);
+  --ff-body: var(--ff-primary);
+
+  /* Font Weight */
+  --fw-medium: 500;
+  --fw-light: 300;
+  --fw-extra-light: 200;
+
+  /* Font Sizes */
+  --fs-primary-heading: 2.6111rem;
+  --fs-secondary-heading: 1.6111rem;
+  --fs-body: 1rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+html,
+body {
+  height: 100%;
+}
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility Classes*/
+/* Colors */
+.bg-red {
+  background-color: var(--clr-red);
+}
+.bg-blue {
+  background-color: var(--clr-blue);
+}
+.bg-green {
+  background-color: var(--clr-green);
+}
+.bg-white {
+  background-color: var(--clr-white);
+}
+.bg-grey-100 {
+  background-color: var(--clr-grey-100);
+}
+.bg-grey-200 {
+  background-color: var(--clr-grey-200);
+}
+.bg-grey-300 {
+  background-color: var(--clr-grey-300);
+}
+.bg-grey-400 {
+  background-color: var(--clr-grey-400);
+}
+.bg-grey-500 {
+  background-color: var(--clr-grey-500);
+}
+
+/* Text Colors */
+.text-red {
+  color: var(--clr-red);
+}
+.text-blue {
+  color: var(--clr-blue);
+}
+.text-green {
+  color: var(--clr-green);
+}
+.text-yellow {
+  color: var(--clr-yellow);
+}
+.text-white {
+  color: var(--clr-white);
+}
+.text-grey-100 {
+  color: var(--clr-grey-100);
+}
+.text-grey-300 {
+  color: var(--clr-grey-300);
+}
+.text-grey-400 {
+  color: var(--clr-grey-400);
+}
+.text-grey-500 {
+  color: var(--clr-grey-500);
+}
+
+/* Font */
+.font-heading {
+  font-family: var(--ff-heading);
+}
+.font-body {
+  font-family: var(--ff-body);
+}
+
+/* Font Weight */
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+.fw-light {
+  font-weight: var(--fw-light);
+}
+.fw-extra-light {
+  font-weight: var(--fw-extra-light);
+}
+
+/* Font Size */
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+  letter-spacing: 4px;
+}
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+  letter-spacing: 3px;
+}
+.fs-body {
+  font-size: var(--fs-body);
+  letter-spacing: 1px;
+}
+
+/* Padding */
+.padding-primary-heading {
+  padding: 18.5px 37px;
+}
+.padding-secondary-heading {
+  padding: 18.5px 23px;
+}
+.padding-body {
+  padding: 11.5px 23px;
+}
+.padding-body-title {
+  padding: 5.75px 23px;
+}
+.padding-banner {
+  padding-left: 23px;
+}
+.padding-preview-title {
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-top: 11.5px;
+}
+.padding-preview {
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-bottom: 11.5px;
+}
+
+/* Margin */
+.margin-100 {
+  margin: 15px;
+}
+.margin-200 {
+  margin: 30px;
+}
+.margin-300 {
+  margin: 45px;
+}
+.margin-400 {
+  margin: 60px;
+}
+.margin-500 {
+  margin: 75px;
+}
+.margin-600 {
+  margin: 90px;
+}
+
+/* Border Radius */
+.br {
+  border-radius: 5px;
+}
+
+/* Display Flex */
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flex-centered {
+  justify-content: center;
+}
+
+/* Display Inline-Block */
+.inline-block {
+  display: inline-block;
+}
+
+/* Verticle Line */
+.verticle-line {
+  width: 3px;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Box Shadow */
+.bs {
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* Styling */
+.container {
+  --max-width: 1400px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+.centered {
+  margin-inline: auto;
+}
+main {
+  padding-top: 60px;
+}
+hr {
+  width: 1400px;
+  border: 1px solid var(--clr-white);
+  border-radius: 5px;
+  margin-inline: auto;
+}
+.hr-margin {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.banner {
+  width: 500px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+}
+
+/* Nav Bar */
+.nav-bar {
+  width: 1400px;
+  position: fixed;
+  z-index: 100;
+}
+.gradient {
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    rgba(45, 45, 45, 1) 0%,
+    rgba(45, 45, 45, 0.8) 40%,
+    rgba(45, 45, 45, 0) 100%
+  );
+}
+nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+  margin-right: 30px;
+}
+.logo-svg {
+  margin-right: 15px;
+  height: 40px;
+}
+ul {
+  list-style-type: none;
+  margin-right: 30px;
+  height: 100%;
+}
+li {
+  display: inline;
+  height: 100%;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+:target {
+  display: block;
+  scroll-margin-top: 110px;
+  padding-top: 0;
+}
+.nav-link {
+  padding: 18px 30px;
+  transition: background-color 0.1s ease-in-out;
+}
+.nav-link-red:hover,
+.nav-link-red:focus {
+  background-color: var(--clr-red);
+}
+.nav-link-blue:hover,
+.nav-link-blue:focus {
+  background-color: var(--clr-blue);
+}
+.nav-link-green:hover,
+.nav-link-green:focus {
+  background-color: var(--clr-green);
+}
+.nav-hr {
+  border: 1px solid var(--clr-grey-100);
+}
+
+/* Hero Section */
+.hero-section {
+  height: 800px;
+  display: flex;
+  align-items: center;
+}
+.hero-image {
+  width: 300px;
+  height: 300px;
+  border: solid var(--clr-grey-200) 3px;
+}
+
+/* About Me */
+.about-me {
+  width: 500px;
+}
+.image {
+  width: 492px;
+  height: 401px;
+}
+
+/* Skills */
+.skill-title {
+  width: 368px;
+}
+.skill-logo {
+  height: 40px;
+}
+.skill-margin {
+  margin: 15px 7.5px;
+}
+.skill-title-text {
+  padding-left: 15px;
+}
+.skills {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.knowledge-key {
+  width: 368px;
+  align-self: baseline;
+}
+
+/* Projects */
+.project-preview {
+  width: 368px;
+  margin: 7.5px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+}
+.project-preview::after {
+  content: "";
+  border: 3px solid var(--clr-white);
+  border-radius: 5px;
+  position: absolute;
+  top: -7.5px;
+  left: -7.5px;
+  width: calc(100% + 15px);
+  height: calc(100% + 15px);
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+.project-preview:hover::after,
+.project-preview:focus::after {
+  opacity: 1;
+}
+.project-preview-image {
+  height: 207px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.project-preview-title {
+  background-color: var(--clr-grey-500);
+}
+.project-content {
+  width: 500px;
+}
+.project-details {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: display 0.15s ease-in-out;
+}
+
+/* Footer */
+footer {
+  height: 200px;
+  margin-top: 90px;
+}
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  margin: 7.5px;
+  cursor: pointer;
+}
+.footer-links {
+  width: 450px;
+  justify-content: space-between;
+}
